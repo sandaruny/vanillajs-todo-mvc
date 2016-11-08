@@ -4,16 +4,17 @@ This is a todo MVC app coded in vanilla.js and uses pure javacript only. Need to
 
 ## Install
 
-``
-$ npm install 
-``
+```
+npm install 
+```
 
 ## Run 
 
-``
+```
 node server.js 
-``
-runs on 8080 port
+```
+
+runs on 8080 port.
 
 
 [npm-image]: https://img.shields.io/npm/v/serve-static.svg
