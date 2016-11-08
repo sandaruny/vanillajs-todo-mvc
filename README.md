@@ -1,7 +1,5 @@
 # ToDo app example with vanilla.js
 
-## Description
-
 This is a todo MVC app coded in vanilla.js and uses pure javacript only. Need to check the render method.
 
 ## Install
