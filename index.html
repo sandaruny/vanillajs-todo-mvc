@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script src="index.js"></script>
+    <style>
+      #todoBucket p{
+        margin-top: 10px;
+        font-family: "Arial", Times, serif;
+      }
+
+      #todoBucket p:hover{
+        cursor: pointer;
+        color: #666666;
+      }
+    
+    </style>
+
+  </head>
+  <body>
+    <input id="txtTodo" type="textfield" onkeydown="view.actions.addTodo(event)" />
+    <div id="todoBucket"></div>
+    <button onclick="view.actions.showAll()">All</button>
+    <button onclick="view.actions.showCompleted()">Completed</button>
+    <button onclick="view.actions.showActive()">Active</button> 
+
+    <script>
+     ( ()=>{
+        App.indexView.render();
+      } )();
+    </script>
+
+  </body>
+</html>
