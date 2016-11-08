@@ -2,11 +2,11 @@
 
   function Controller(){
     let todoArray = [], index = 0, observers = [];
-    let showAll = function(){
+    let showAll = () => {
       return todoArray;
     },
 
-      addTodo = function(todo){
+      addTodo = (todo) => {
         if(todo instanceof ToDo){
           todo.index = index ++;
           todoArray.push(todo);
@@ -15,7 +15,7 @@
         notify();
       },
 
-      showCompleted = function(){
+      showCompleted = () => {
         let arr = [];
         todoArray.forEach( t => (t.completed && arr.push(t)) );
         return arr;
