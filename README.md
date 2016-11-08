@@ -4,13 +4,13 @@ This is a todo MVC app coded in vanilla.js and uses pure javacript only. Need to
 
 ## Install
 
-``sh
+``
 $ npm install 
 ``
 
 ## Run 
 
-``js
+``
 node server.js 
 ``
 runs on 8080 port
