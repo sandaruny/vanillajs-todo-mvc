@@ -4,7 +4,7 @@
   function Store(name, initData = {}){
 
     var getter = function() {
-      console.log(this);
+      // console.log(this);
       // o[prop] = value;
       return this;
     },
@@ -39,20 +39,57 @@
         }
       };
 
-    // o.push = (value) => {
-    //   let data = JSON.parse(localStorage.getItem(name));
-    //   data[index] = value;
-    //   //   o[index] = value;
+    // Object.defineProperty(o, );
+
+    // for(let prop in o.__proto_){
     //
-    //   Object.defineProperty(o, index, {
-    //     get: getter.bind(data[index]),
-    //     set: setter.bind(data, index)
+    //   Object.defineProperty(o, prop, {
+    //     get:() => {
+    //       console.log('get');
+    //     },
+    //     set: (prop, val) => {
+    //       console.log('new ',prop, val);
+    //     }
     //   });
+    // }
     //
-    //   localStorage.setItem(name, JSON.stringify(data));
-    //   index ++;
-    //   o.length = index;
+    // o.set = (prop, value) =>{
+    //   console.log('set ', prop, value );
+    //
     // };
+
+   /*  TODO: 
+    
+    *Object.getOwnPropertyNames(o.__proto__).forEach(k => {
+  Object.defineProperty(o, k, {
+    get: (function(){
+      console.log('new  get', arguments);
+      return this;
+    }).bind(o),
+    set: (prop,val) => {
+      console.log('new new');
+      return (() => {return true}).bind(o, arguments);
+    }
+  })
+}); 
+    *
+    *
+      *  */
+
+    o.push = (value) => {
+      let data = JSON.parse(localStorage.getItem(name));
+      data[index] = value;
+      //   o[index] = value;
+
+      Object.defineProperty(o, index, {
+        get: getter.bind(data[index]),
+        set: setter.bind(data, index)
+      });
+
+      localStorage.setItem(name, JSON.stringify(data));
+      index ++;
+      o.length = index;
+    };
 
     //init();
 
