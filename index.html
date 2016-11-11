@@ -2,12 +2,12 @@
   <head>
     <script src="index.js"></script>
     <style>
-      #todoBucket p{
+      #todo-bucket li{
         margin-top: 10px;
         font-family: "Arial", Times, serif;
       }
 
-      #todoBucket p:hover{
+      #todo-bucket li:hover{
         cursor: pointer;
         color: #666666;
       }
@@ -16,17 +16,12 @@
 
   </head>
   <body>
-    <input id="txtTodo" type="textfield" onkeydown="view.actions.addTodo(event)" />
-    <div id="todoBucket"></div>
-    <button onclick="view.actions.showAll()">All</button>
-    <button onclick="view.actions.showCompleted()">Completed</button>
-    <button onclick="view.actions.showActive()">Active</button> 
-
-    <script>
-     ( ()=>{
-        App.indexView.render();
-      } )();
-    </script>
-
+    <div id="todo-app">
+      <input id="txt-todo" type="textfield" />
+      <ul id="todo-bucket"></ul>
+      <button id="view-all">All</button>
+      <button id="view-completed">Completed</button>
+      <button id="view-active">Active</button> 
+    </div>
   </body>
 </html>
