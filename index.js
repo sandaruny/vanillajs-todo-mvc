@@ -1,6 +1,7 @@
 (function(window){
 
 
+
   function Store(name, initData = {}){
 
     var getter = function() {
